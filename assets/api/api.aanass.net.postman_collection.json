@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "63e7aae2-77c2-4885-b22c-8f696bb4c7ad",
+		"name": "api.aanass.net",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19245066"
+	},
+	"item": [
+		{
+			"name": "access_token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "nassfoods_app",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "Nassfoods@$669",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.aanass.net/auth/client_credentials.php/access_token",
+					"protocol": "https",
+					"host": [
+						"api",
+						"aanass",
+						"net"
+					],
+					"path": [
+						"auth",
+						"client_credentials.php",
+						"access_token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
