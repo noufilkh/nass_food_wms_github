@@ -154,7 +154,7 @@ class ApiService {
 
   static Future<dynamic> testHoConnection() async {
     final url = Uri.parse(
-      'https://api.aanass.net/auth/client_credentials.php/access_token',
+      'https://localhost:8095/api/auth/client_credentials.php/access_token',
     );
 
     final body = {
@@ -170,7 +170,7 @@ class ApiService {
 
   static Future<dynamic> getItemsMaster() async {
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/NFitemmaster/2206',
+      'https://localhost:8095/api/auth/apiNF.php/NFitemmaster/2206',
     );
     return get(url);
   }
@@ -182,7 +182,7 @@ class ApiService {
   ) async {
     itemcode = itemcode.trim();
     locator = locator.trim();
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/ItemSearch');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/ItemSearch');
 
     final body = {
       'ItemSearch': [
@@ -215,7 +215,7 @@ class ApiService {
     String userid,
   ) async {
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/confirmporeceipt',
+      'https://localhost:8095/api/auth/apiNF.php/confirmporeceipt',
     );
 
     final body = {

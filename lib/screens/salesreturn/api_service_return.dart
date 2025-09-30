@@ -9,7 +9,7 @@ class SalesReturnApiService {
     orderNumber = orderNumber.trim();
 
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/salesreturnview/$orderNumber',
+      'https://localhost:8095/api/auth/apiNF.php/salesreturnview/$orderNumber',
     );
 
     final searchjson = await ApiService.get(url);
@@ -30,7 +30,7 @@ class SalesReturnApiService {
     String lineid,
     String enteredquantity,
   ) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/salesreturn');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/salesreturn');
 
     final orgid = SharedPreferencesHelper.loadString(
       SharedPreferencesHelper.KEY_ORGID,
@@ -71,7 +71,7 @@ class SalesReturnApiService {
     String reason,
   ) async {
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/confirmreturn',
+      'https://localhost:8095/api/auth/apiNF.php/confirmreturn',
     );
 
     final orgid = SharedPreferencesHelper.loadString(

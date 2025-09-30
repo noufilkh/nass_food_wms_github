@@ -33,10 +33,10 @@ migrate_working_dir/
 .pub/
 /build/
 /database_api
-/macos/
-/ios/
-/linux/
-/Requirement/
+/ios
+/linux
+/macos
+
 
 # Symbolication related
 app.*.symbols

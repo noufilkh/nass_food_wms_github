@@ -6,7 +6,7 @@ class LoginApiService {
     String password,
     String key,
   ) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/validatenfu');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/validatenfu');
     final body = {
       'validateNF': [
         {'username': username, 'password': password, 'decrypt': key},
@@ -20,7 +20,7 @@ class LoginApiService {
 
   static Future<dynamic> getuserdata(String username) async {
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/getuserdetails/$username',
+      'https://localhost:8095/api/auth/apiNF.php/getuserdetails/$username',
     );
     return ApiService.get(url);
   }

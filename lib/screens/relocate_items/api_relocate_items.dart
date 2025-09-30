@@ -11,7 +11,7 @@ class RelocateItemsApiService {
     String tolocator,
     String tosubinventory,
   ) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/relocateitem');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/relocateitem');
 
     final orgid = SharedPreferencesHelper.loadString(
       SharedPreferencesHelper.KEY_ORGID,
@@ -55,7 +55,7 @@ class RelocateItemsApiService {
     String fromlocator,
     String tolocator,
   ) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/relocatepallet');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/relocatepallet');
 
     final orgid = SharedPreferencesHelper.loadString(
       SharedPreferencesHelper.KEY_ORGID,

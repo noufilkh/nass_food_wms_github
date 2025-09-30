@@ -6,7 +6,7 @@ class SearchItemApiService {
     String itemcode,
     String locator,
   ) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/ItemSearch');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/ItemSearch');
     final body = {
       'ItemSearch': [
         {'Itemcode': itemcode, 'Locator': locator},

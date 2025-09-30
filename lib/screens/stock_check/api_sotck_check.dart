@@ -9,7 +9,7 @@ class StockCheckApiService {
     stockcheckno = stockcheckno.trim();
 
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/stockverify/$stockcheckno',
+      'https://localhost:8095/api/auth/apiNF.php/stockverify/$stockcheckno',
     );
 
     final searchjson = await ApiService.get(url);
@@ -32,7 +32,7 @@ class StockCheckApiService {
     String locator,
   ) async {
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/phycheckpallet',
+      'https://localhost:8095/api/auth/apiNF.php/phycheckpallet',
     );
     final body = {
       'phycheckpallet': [
@@ -64,7 +64,7 @@ class StockCheckApiService {
     String locator,
     String pallet,
   ) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/stockcheck');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/stockcheck');
     final body = {
       'stockcheck': [
         {'Transaction_no': stockcheckno, 'Locator': locator, 'Pallet': pallet},
@@ -94,7 +94,7 @@ class StockCheckApiService {
     List<Stockcheckupdatelist> updatelist,
   ) async {
     List<StockcheckupdateErrorlist> errormessage = [];
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/updatephyqty');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/updatephyqty');
 
     final userid = SharedPreferencesHelper.loadString(
       SharedPreferencesHelper.KEY_USERID,
@@ -155,7 +155,7 @@ class StockCheckApiService {
 
   static Future<List<String>> stockcheckconfirm(String headerid) async {
     List<String> errormessage = [];
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/confirmcheck');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/confirmcheck');
 
     final userid = SharedPreferencesHelper.loadString(
       SharedPreferencesHelper.KEY_USERID,

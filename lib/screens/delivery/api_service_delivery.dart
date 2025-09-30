@@ -10,7 +10,7 @@ class DeliveryApiService {
     deliveryNumber = deliveryNumber.trim();
 
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/wmspendinglines/$deliveryNumber',
+      'https://localhost:8095/api/auth/apiNF.php/wmspendinglines/$deliveryNumber',
     );
 
     final searchjson = await ApiService.get(url);
@@ -33,7 +33,7 @@ class DeliveryApiService {
     deliveryNumber = deliveryNumber.trim();
 
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/wmspendinglineslocator/$deliveryNumber/$locator',
+      'https://localhost:8095/api/auth/apiNF.php/wmspendinglineslocator/$deliveryNumber/$locator',
     );
 
     final searchjson = await ApiService.get(url);
@@ -57,7 +57,7 @@ class DeliveryApiService {
     String ctnquantity,
     String weight,
   ) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/updatesodtls');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/updatesodtls');
 
     final orgid = SharedPreferencesHelper.loadString(
       SharedPreferencesHelper.KEY_ORGID,
@@ -106,7 +106,7 @@ class DeliveryApiService {
   }
 
   static Future<String> deliveryconfirmation(String deliveryno) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/confirmso');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/confirmso');
 
     final orgid = SharedPreferencesHelper.loadString(
       SharedPreferencesHelper.KEY_ORGID,

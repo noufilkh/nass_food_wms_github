@@ -9,7 +9,7 @@ class RecieveApiService {
     poNumber = poNumber.trim();
 
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/wmspendingpo/$poNumber',
+      'https://localhost:8095/api/auth/apiNF.php/wmspendingpo/$poNumber',
     );
 
     final searchjson = await ApiService.get(url);
@@ -33,7 +33,7 @@ class RecieveApiService {
     itemcode = itemcode.trim();
 
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/wmspendingrecpt/$poNumber/$itemcode',
+      'https://localhost:8095/api/auth/apiNF.php/wmspendingrecpt/$poNumber/$itemcode',
     );
 
     final searchjson = await ApiService.get(url);
@@ -70,7 +70,7 @@ class RecieveApiService {
     String userid,
     String? lineid,
   ) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/wmsmrrinsert');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/wmsmrrinsert');
 
     final body = {
       'WmsMrrInsert': [
@@ -117,7 +117,7 @@ class RecieveApiService {
     String ctnquantity,
     String weight,
   ) async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/updatesodtls');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/updatesodtls');
 
     final orgid = SharedPreferencesHelper.loadString(
       SharedPreferencesHelper.KEY_ORGID,
@@ -169,7 +169,7 @@ class RecieveApiService {
     poNumber = poNumber.trim();
 
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/wmsreceiptinfo/$poNumber',
+      'https://localhost:8095/api/auth/apiNF.php/wmsreceiptinfo/$poNumber',
     );
 
     final searchjson = await ApiService.get(url);
@@ -199,7 +199,7 @@ class RecieveApiService {
 
   static Future<List<ShipmentModeListItem>> getAllshipmentmode() async {
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/shipmentmodes',
+      'https://localhost:8095/api/auth/apiNF.php/shipmentmodes',
     );
 
     final searchjson = await ApiService.get(url);
@@ -216,7 +216,7 @@ class RecieveApiService {
   }
 
   static Future<List<ShipmentCountryListItem>> getAllcountry() async {
-    final url = Uri.parse('https://api.aanass.net/auth/apiNF.php/wmscountry');
+    final url = Uri.parse('https://localhost:8095/api/auth/apiNF.php/wmscountry');
 
     final searchjson = await ApiService.get(url);
 
@@ -242,7 +242,7 @@ class RecieveApiService {
     String date,
   ) async {
     final url = Uri.parse(
-      'https://api.aanass.net/auth/apiNF.php/insertreceiptinfo',
+      'https://localhost:8095/api/auth/apiNF.php/insertreceiptinfo',
     );
 
     final orgid = SharedPreferencesHelper.loadString(
